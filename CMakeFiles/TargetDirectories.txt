@@ -1,0 +1,3 @@
+/home/jame/share_user/git_leveldb/CMakeFiles/edit_cache.dir
+/home/jame/share_user/git_leveldb/CMakeFiles/rebuild_cache.dir
+/home/jame/share_user/git_leveldb/CMakeFiles/leveldb_example.dir

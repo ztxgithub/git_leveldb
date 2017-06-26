@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="unqlite"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/jame/c++/test/x86_linux_example/leveldb_example"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/jame/c++/test/x86_linux_example/leveldb_example"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/jame/c++/test/x86_linux_example/leveldb_example"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unqlite">
+				<Option output="/home/jame/c++/test/x86_linux_example/leveldb_example/unqlite" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jame/c++/test/x86_linux_example/leveldb_example"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jame/c++/test/x86_linux_example/leveldb_example/./easylogger/include"/>
+					<Add directory="/home/jame/c++/test/x86_linux_example/leveldb_example/./include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 unqlite"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unqlite/fast">
+				<Option output="/home/jame/c++/test/x86_linux_example/leveldb_example/unqlite" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jame/c++/test/x86_linux_example/leveldb_example"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jame/c++/test/x86_linux_example/leveldb_example/./easylogger/include"/>
+					<Add directory="/home/jame/c++/test/x86_linux_example/leveldb_example/./include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 unqlite/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/jame/c++/test/x86_linux_example/leveldb_example/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/jame/c++/test/x86_linux_example/leveldb_example/easylogger/elog.c">
+			<Option target="unqlite"/>
+		</Unit>
+		<Unit filename="/home/jame/c++/test/x86_linux_example/leveldb_example/easylogger/elog_port.c">
+			<Option target="unqlite"/>
+		</Unit>
+		<Unit filename="/home/jame/c++/test/x86_linux_example/leveldb_example/easylogger/elog_utils.c">
+			<Option target="unqlite"/>
+		</Unit>
+		<Unit filename="/home/jame/c++/test/x86_linux_example/leveldb_example/easylogger/log.cpp">
+			<Option target="unqlite"/>
+		</Unit>
+		<Unit filename="/home/jame/c++/test/x86_linux_example/leveldb_example/main.cpp">
+			<Option target="unqlite"/>
+		</Unit>
+		<Unit filename="/home/jame/c++/test/x86_linux_example/leveldb_example/src/unqlite.c">
+			<Option target="unqlite"/>
+		</Unit>
+		<Unit filename="/home/jame/c++/test/x86_linux_example/leveldb_example/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
