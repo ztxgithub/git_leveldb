@@ -60,15 +60,15 @@ include CMakeFiles/leveldb_example.dir/flags.make
 CMakeFiles/leveldb_example.dir/main.cpp.o: CMakeFiles/leveldb_example.dir/flags.make
 CMakeFiles/leveldb_example.dir/main.cpp.o: main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jame/share_user/git_leveldb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/leveldb_example.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/leveldb_example.dir/main.cpp.o -c /home/jame/share_user/git_leveldb/main.cpp
+	arm-linux-g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/leveldb_example.dir/main.cpp.o -c /home/jame/share_user/git_leveldb/main.cpp
 
 CMakeFiles/leveldb_example.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/leveldb_example.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jame/share_user/git_leveldb/main.cpp > CMakeFiles/leveldb_example.dir/main.cpp.i
+	arm-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jame/share_user/git_leveldb/main.cpp > CMakeFiles/leveldb_example.dir/main.cpp.i
 
 CMakeFiles/leveldb_example.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/leveldb_example.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jame/share_user/git_leveldb/main.cpp -o CMakeFiles/leveldb_example.dir/main.cpp.s
+	arm-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jame/share_user/git_leveldb/main.cpp -o CMakeFiles/leveldb_example.dir/main.cpp.s
 
 CMakeFiles/leveldb_example.dir/main.cpp.o.requires:
 
@@ -81,18 +81,42 @@ CMakeFiles/leveldb_example.dir/main.cpp.o.provides: CMakeFiles/leveldb_example.d
 CMakeFiles/leveldb_example.dir/main.cpp.o.provides.build: CMakeFiles/leveldb_example.dir/main.cpp.o
 
 
+CMakeFiles/leveldb_example.dir/src/unqlite.c.o: CMakeFiles/leveldb_example.dir/flags.make
+CMakeFiles/leveldb_example.dir/src/unqlite.c.o: src/unqlite.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jame/share_user/git_leveldb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/leveldb_example.dir/src/unqlite.c.o"
+	arm-linux-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leveldb_example.dir/src/unqlite.c.o   -c /home/jame/share_user/git_leveldb/src/unqlite.c
+
+CMakeFiles/leveldb_example.dir/src/unqlite.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/leveldb_example.dir/src/unqlite.c.i"
+	arm-linux-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jame/share_user/git_leveldb/src/unqlite.c > CMakeFiles/leveldb_example.dir/src/unqlite.c.i
+
+CMakeFiles/leveldb_example.dir/src/unqlite.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/leveldb_example.dir/src/unqlite.c.s"
+	arm-linux-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jame/share_user/git_leveldb/src/unqlite.c -o CMakeFiles/leveldb_example.dir/src/unqlite.c.s
+
+CMakeFiles/leveldb_example.dir/src/unqlite.c.o.requires:
+
+.PHONY : CMakeFiles/leveldb_example.dir/src/unqlite.c.o.requires
+
+CMakeFiles/leveldb_example.dir/src/unqlite.c.o.provides: CMakeFiles/leveldb_example.dir/src/unqlite.c.o.requires
+	$(MAKE) -f CMakeFiles/leveldb_example.dir/build.make CMakeFiles/leveldb_example.dir/src/unqlite.c.o.provides.build
+.PHONY : CMakeFiles/leveldb_example.dir/src/unqlite.c.o.provides
+
+CMakeFiles/leveldb_example.dir/src/unqlite.c.o.provides.build: CMakeFiles/leveldb_example.dir/src/unqlite.c.o
+
+
 CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.o: CMakeFiles/leveldb_example.dir/flags.make
 CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.o: easylogger/elog_utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jame/share_user/git_leveldb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.o   -c /home/jame/share_user/git_leveldb/easylogger/elog_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jame/share_user/git_leveldb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.o"
+	arm-linux-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.o   -c /home/jame/share_user/git_leveldb/easylogger/elog_utils.c
 
 CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jame/share_user/git_leveldb/easylogger/elog_utils.c > CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.i
+	arm-linux-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jame/share_user/git_leveldb/easylogger/elog_utils.c > CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.i
 
 CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jame/share_user/git_leveldb/easylogger/elog_utils.c -o CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.s
+	arm-linux-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jame/share_user/git_leveldb/easylogger/elog_utils.c -o CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.s
 
 CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.o.requires:
 
@@ -107,16 +131,16 @@ CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.o.provides.build: CMakeFi
 
 CMakeFiles/leveldb_example.dir/easylogger/elog.c.o: CMakeFiles/leveldb_example.dir/flags.make
 CMakeFiles/leveldb_example.dir/easylogger/elog.c.o: easylogger/elog.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jame/share_user/git_leveldb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/leveldb_example.dir/easylogger/elog.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leveldb_example.dir/easylogger/elog.c.o   -c /home/jame/share_user/git_leveldb/easylogger/elog.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jame/share_user/git_leveldb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/leveldb_example.dir/easylogger/elog.c.o"
+	arm-linux-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leveldb_example.dir/easylogger/elog.c.o   -c /home/jame/share_user/git_leveldb/easylogger/elog.c
 
 CMakeFiles/leveldb_example.dir/easylogger/elog.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/leveldb_example.dir/easylogger/elog.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jame/share_user/git_leveldb/easylogger/elog.c > CMakeFiles/leveldb_example.dir/easylogger/elog.c.i
+	arm-linux-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jame/share_user/git_leveldb/easylogger/elog.c > CMakeFiles/leveldb_example.dir/easylogger/elog.c.i
 
 CMakeFiles/leveldb_example.dir/easylogger/elog.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/leveldb_example.dir/easylogger/elog.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jame/share_user/git_leveldb/easylogger/elog.c -o CMakeFiles/leveldb_example.dir/easylogger/elog.c.s
+	arm-linux-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jame/share_user/git_leveldb/easylogger/elog.c -o CMakeFiles/leveldb_example.dir/easylogger/elog.c.s
 
 CMakeFiles/leveldb_example.dir/easylogger/elog.c.o.requires:
 
@@ -131,16 +155,16 @@ CMakeFiles/leveldb_example.dir/easylogger/elog.c.o.provides.build: CMakeFiles/le
 
 CMakeFiles/leveldb_example.dir/easylogger/log.cpp.o: CMakeFiles/leveldb_example.dir/flags.make
 CMakeFiles/leveldb_example.dir/easylogger/log.cpp.o: easylogger/log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jame/share_user/git_leveldb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/leveldb_example.dir/easylogger/log.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/leveldb_example.dir/easylogger/log.cpp.o -c /home/jame/share_user/git_leveldb/easylogger/log.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jame/share_user/git_leveldb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/leveldb_example.dir/easylogger/log.cpp.o"
+	arm-linux-g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/leveldb_example.dir/easylogger/log.cpp.o -c /home/jame/share_user/git_leveldb/easylogger/log.cpp
 
 CMakeFiles/leveldb_example.dir/easylogger/log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/leveldb_example.dir/easylogger/log.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jame/share_user/git_leveldb/easylogger/log.cpp > CMakeFiles/leveldb_example.dir/easylogger/log.cpp.i
+	arm-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jame/share_user/git_leveldb/easylogger/log.cpp > CMakeFiles/leveldb_example.dir/easylogger/log.cpp.i
 
 CMakeFiles/leveldb_example.dir/easylogger/log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/leveldb_example.dir/easylogger/log.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jame/share_user/git_leveldb/easylogger/log.cpp -o CMakeFiles/leveldb_example.dir/easylogger/log.cpp.s
+	arm-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jame/share_user/git_leveldb/easylogger/log.cpp -o CMakeFiles/leveldb_example.dir/easylogger/log.cpp.s
 
 CMakeFiles/leveldb_example.dir/easylogger/log.cpp.o.requires:
 
@@ -155,16 +179,16 @@ CMakeFiles/leveldb_example.dir/easylogger/log.cpp.o.provides.build: CMakeFiles/l
 
 CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o: CMakeFiles/leveldb_example.dir/flags.make
 CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o: easylogger/elog_port.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jame/share_user/git_leveldb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o   -c /home/jame/share_user/git_leveldb/easylogger/elog_port.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jame/share_user/git_leveldb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o"
+	arm-linux-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o   -c /home/jame/share_user/git_leveldb/easylogger/elog_port.c
 
 CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jame/share_user/git_leveldb/easylogger/elog_port.c > CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.i
+	arm-linux-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jame/share_user/git_leveldb/easylogger/elog_port.c > CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.i
 
 CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jame/share_user/git_leveldb/easylogger/elog_port.c -o CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.s
+	arm-linux-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jame/share_user/git_leveldb/easylogger/elog_port.c -o CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.s
 
 CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o.requires:
 
@@ -177,50 +201,29 @@ CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o.provides: CMakeFiles/lev
 CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o.provides.build: CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o
 
 
-CMakeFiles/leveldb_example.dir/src/unqlite.c.o: CMakeFiles/leveldb_example.dir/flags.make
-CMakeFiles/leveldb_example.dir/src/unqlite.c.o: src/unqlite.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jame/share_user/git_leveldb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/leveldb_example.dir/src/unqlite.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leveldb_example.dir/src/unqlite.c.o   -c /home/jame/share_user/git_leveldb/src/unqlite.c
-
-CMakeFiles/leveldb_example.dir/src/unqlite.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/leveldb_example.dir/src/unqlite.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jame/share_user/git_leveldb/src/unqlite.c > CMakeFiles/leveldb_example.dir/src/unqlite.c.i
-
-CMakeFiles/leveldb_example.dir/src/unqlite.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/leveldb_example.dir/src/unqlite.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jame/share_user/git_leveldb/src/unqlite.c -o CMakeFiles/leveldb_example.dir/src/unqlite.c.s
-
-CMakeFiles/leveldb_example.dir/src/unqlite.c.o.requires:
-
-.PHONY : CMakeFiles/leveldb_example.dir/src/unqlite.c.o.requires
-
-CMakeFiles/leveldb_example.dir/src/unqlite.c.o.provides: CMakeFiles/leveldb_example.dir/src/unqlite.c.o.requires
-	$(MAKE) -f CMakeFiles/leveldb_example.dir/build.make CMakeFiles/leveldb_example.dir/src/unqlite.c.o.provides.build
-.PHONY : CMakeFiles/leveldb_example.dir/src/unqlite.c.o.provides
-
-CMakeFiles/leveldb_example.dir/src/unqlite.c.o.provides.build: CMakeFiles/leveldb_example.dir/src/unqlite.c.o
-
-
 # Object files for target leveldb_example
 leveldb_example_OBJECTS = \
 "CMakeFiles/leveldb_example.dir/main.cpp.o" \
+"CMakeFiles/leveldb_example.dir/src/unqlite.c.o" \
 "CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.o" \
 "CMakeFiles/leveldb_example.dir/easylogger/elog.c.o" \
 "CMakeFiles/leveldb_example.dir/easylogger/log.cpp.o" \
-"CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o" \
-"CMakeFiles/leveldb_example.dir/src/unqlite.c.o"
+"CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o"
 
 # External object files for target leveldb_example
 leveldb_example_EXTERNAL_OBJECTS =
 
 leveldb_example: CMakeFiles/leveldb_example.dir/main.cpp.o
+leveldb_example: CMakeFiles/leveldb_example.dir/src/unqlite.c.o
 leveldb_example: CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.o
 leveldb_example: CMakeFiles/leveldb_example.dir/easylogger/elog.c.o
 leveldb_example: CMakeFiles/leveldb_example.dir/easylogger/log.cpp.o
 leveldb_example: CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o
-leveldb_example: CMakeFiles/leveldb_example.dir/src/unqlite.c.o
 leveldb_example: CMakeFiles/leveldb_example.dir/build.make
-leveldb_example: /usr/local/lib/libleveldb.so
+leveldb_example: /opt/gcc-4.4.4-glibc-2.11.1-multilib-1.0/arm-fsl-linux-gnueabi/arm-fsl-linux-gnueabi/multi-libs/usr/lib/libpthread.so
+leveldb_example: /opt/fsu_packages/boost/lib/libboost_serialization.so
+leveldb_example: /opt/fsu_packages/boost/lib/libboost_wserialization.so
+leveldb_example: /opt/fsu_packages/leveldb-1.20/lib/libleveldb.so
 leveldb_example: CMakeFiles/leveldb_example.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jame/share_user/git_leveldb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable leveldb_example"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/leveldb_example.dir/link.txt --verbose=$(VERBOSE)
@@ -231,11 +234,11 @@ CMakeFiles/leveldb_example.dir/build: leveldb_example
 .PHONY : CMakeFiles/leveldb_example.dir/build
 
 CMakeFiles/leveldb_example.dir/requires: CMakeFiles/leveldb_example.dir/main.cpp.o.requires
+CMakeFiles/leveldb_example.dir/requires: CMakeFiles/leveldb_example.dir/src/unqlite.c.o.requires
 CMakeFiles/leveldb_example.dir/requires: CMakeFiles/leveldb_example.dir/easylogger/elog_utils.c.o.requires
 CMakeFiles/leveldb_example.dir/requires: CMakeFiles/leveldb_example.dir/easylogger/elog.c.o.requires
 CMakeFiles/leveldb_example.dir/requires: CMakeFiles/leveldb_example.dir/easylogger/log.cpp.o.requires
 CMakeFiles/leveldb_example.dir/requires: CMakeFiles/leveldb_example.dir/easylogger/elog_port.c.o.requires
-CMakeFiles/leveldb_example.dir/requires: CMakeFiles/leveldb_example.dir/src/unqlite.c.o.requires
 
 .PHONY : CMakeFiles/leveldb_example.dir/requires
 

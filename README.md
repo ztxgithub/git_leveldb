@@ -1,107 +1,115 @@
-# UnQLite数据库
+# leveldb
 
-## 数据库基础知识
-
-### 事务
-
-   - 概念:一个数据库事务通常包含对数据库进行读或写的一个操作序列.它的存在包含有以下两个目的:
-    1、为数据库操作提供了一个从失败中恢复到正常状态的方法，同时提供了数据库即使在异常状态下仍能保持一致性的方法
-    2、当多个应用程序在并发访问数据库时，可以在这些应用程序之间提供一个隔离方法，以防止彼此的操作互相干扰
- 当一个事务被提交给了DBMS（数据库管理系统），则DBMS需要确保该事务中的所有操作都成功完成且其结果被永久保存在数据库中，
- 如果事务中有的操作没有成功完成，则事务中的所有操作都需要被回滚，回到事务执行前的状态（要么全执行，要么全都不执行）;
- 同时，该事务对数据库或者其他事务的执行无影响，所有的事务都好像在独立的运行。
-        
-
-   - 特性
-    并非任意的对数据库的操作序列都是数据库事务。事务应该具有4个属性：原子性、一致性、隔离性、持久性。这四个属性通常称为ACID特性
-[参考资料](http://www.hollischuang.com/archives/898)
-
-## UNQLite简介
+## 安装步骤
 
 ``` shell
 
-    UnQLite是一个文档存储数据库，类似于MongoDB、Redis、CouchDB等。同时，
-    也是一个标准的Key/Value存储，与BerkeleyDB和LevelDB等类似．UnQLite是一个嵌入式NoSQL（键/值存储和文档存储）数据库引擎。
-    不同于其他绝大多数NoSQL数据库，UnQLite没有一个独立的服务器进程。UnQLite直接读/写普通的磁盘文件,
-    UnQLite是一个自包含的C语言程序库，无任何外部依赖
-    
-    单一数据库文件:
-        一个UnQLite数据库，是一个单一的普通磁盘文件，可以位于目录层次结构的任何地方。只要UnQLite可以读取这个磁盘文件，
-        就可以读取这个数据库中的任何数据。只要这个磁盘文件和所在目录是可读可写的，UnQLite就可以修改数据库中的任何内容
-
+    git clone https://github.com/google/leveldb.git
+    cd leveldb/
+    make
+    sudo cp out-static/lib* out-shared/lib* /usr/local/lib/
+    cd include/
+    sudo cp -r leveldb /usr/local/include/
+    sudo ldconfig
+      							
 ```
 
-## UNQLite存储方式
+## 简介
 
-``` shell
+- 一个LevelDB数据库有一个文件系统目录名称与之关联。该数据库的所有内容都存储在该目录下
 
-    结构化数据存储：
-    
-        UnQLite的结构化数据存储是通过文档存储接口表达给客户端的。文档存储本身是用来存储JSOB文档
-        （如，对象、数组、字符串等）在数据库中，而且由Jx9编程语言支撑。
-        Jx9是一种嵌入式的脚本语言，也叫扩展语言，被设计用于通用过程化编程，具备数据表述的特性。
-    
-        
-    原始数据存储：
-        原始数据存储是通过Key/Value存储接口表达给客户端的。UnQLite是一个标准的key/value存储，
-        类似于Berkeley DB、Tokyo Cabinet和LevelDB等，但拥有更加丰富的特性，包括支持事务（ACID），并发读取等。
-        在KV存储下，键和值都被视为简单的字节数组，所以内容可以是任何东西，包括ASCII字符串、二进制对象和磁盘文件等
-
-```
-
-## 注意事项
-
-- Transactions are not supported for in-memory databases.(内存数据库部不支持事务)
-
-- unqlite_kv_cursor_init() and unqlite_kv_cursor_release() are thread-safe while the other interfaces are not.
- Caller must ensure that no other thread can access the same cursor handle. Otherwise the result is undefined.
-
-## 接口使用
-
-- 数据库错误返回,打印日志
+## 接口
 
 ``` c
 
-    if( rc != UNQLITE_OK )　{
-      const char *zBuf;
-      int iLen;
-      
-      /* Something goes wrong, extract database error log */
-      
-      unqlite_config(pDb,UNQLITE_CONFIG_ERR_LOG,&zErr,&iLen);
-      
-      if( iLen > 0 ){
-        puts(zBuf);
+    leveldb::WriteOptions writeOptions;
+    
+    描述:
+        默认: writeOptions.sync = false;当机器崩溃时则某些最近的写入可能会丢失。 请
+        注意，如果只是崩溃的进程（即机器不重新启动），即使sync = false也不会丢失任何写入
+        
+    writeOptions.sync = true;  //每一次都会写入到磁盘中,所以速度较慢
+    
+    异步性的写操作通常要比同步性的快1000倍
+      							
+```
+
+``` c
+
+    leveldb::Iterator* it = db->NewIterator(leveldb::ReadOptions());
+    
+    注意:
+        返回的 it 是堆栈分配的　leveldb::Iterator的指针,用完后一定要 delete it,并且要在 delete db 之前
+        (caller must call one of the Seek methods on the iterator before using it)
+      							
+```
+
+- 读操作与写操作
+
+``` c
+
+  std::string value;
+  leveldb::Status s = db->Get(leveldb::ReadOptions(), key1, &value);
+  if (s.ok()) s = db->Put(leveldb::WriteOptions(), key2, value);
+  if (s.ok()) s = db->Delete(leveldb::WriteOptions(), key1);
+  
+```
+  
+- 原子性更新
+
+``` c
+
+    需要注意的是。在上面的操作中，如果在Put key2之后，delete key1之前，进程死掉了，那么相同的value值就可能会存储在多个key值下面。
+    例如在key1和key2的值是相同的.
+    
+    可以通过使用WriteBatch类原子性的执行一组更新操作，来避免这样的问题：
+    
+      #include "leveldb/write_batch.h"
+      ...
+      std::string value;
+      leveldb::Status s = db->Get(leveldb::ReadOptions(), key1, &value);
+      if (s.ok()) {
+        leveldb::WriteBatch batch;
+        batch.Delete(key1);
+        batch.Put(key2, value);
+        s = db->Write(leveldb::WriteOptions(), &batch);
       }
-    }
-    
-```
-- unqlite_kv_store函数和unqlite_kv_store_fmt函数
+      
+    WriteBatch
+        对数据库的一系列更改操作，这些操作会按照它们加入顺序被执行。除了提供这种原子性的保证外，
+        WriteBatch还可以通过将多个更新放到同一个batch里，在存在大量更新操作时，加速它们的执行。
 
-``` shell
-
-        Write a new record into the database. If the record does not exists, it is created. 
-        Otherwise, it is replaced. That is, the new data overwrite the old data. 
-    
-```
-
-- 删除记录
-
-``` shell
-
-        1.删除一条记录 unqlite_kv_delete()
-        2.删除多条记录 unqlite_kv_cursor_delete_entry()
-    
-```
-
-- Positioning Database Cursors :遍历数据记录
+ ```
+- 并发
 
 ``` c
 
-    int unqlite_kv_cursor_valid_entry(unqlite_kv_cursor *pCursor)
-    
-    返回值：
-        1 : the cursor is pointing to a valid record (有效数据记录)
-        0:  无效的数据记录 
-    
-```
+    同一时刻只能有一个进程打开数据库。为了防止误用，LevelDB实现会从操作系统申请一把锁。在一个进程内部，同一个leveldb::DB
+    对象可以安全地被多个并发线程共享。多个线程可以在同一个数据库中写数据，获取迭代器，
+    执行Get调用而不需要额外的同步(LevelDB实现会自动的完成所需的同步)。
+    然而其他对象(比如迭代器和WriteBatch)可能需要额外的同步。
+    如果两个线程共享相同的此类对象，它们必须使用自己的锁机制来保护对此类对象的访问。
+
+ ```
+ 
+ - Slice类 
+ 
+ ``` c
+ 
+     Slice(const char* d, size_t n) : data_(d), size_(n) { } 
+     
+     构造结构体 :
+     
+     Point  value_point = {2,3};
+     db->Put(writeOptions, "point1", leveldb::Slice((char *)(&value_point), sizeof(Point)));
+     
+     放回数据头指针
+     // Return a pointer to the beginning of the referenced data
+       const char* data() const { return data_; }
+   
+     是不是以"XXX"开头
+    bool starts_with(const Slice& x) const {
+     return ((size_ >= x.size_) &&
+             (memcmp(data_, x.data_, x.size_) == 0));
+   }
+  ```

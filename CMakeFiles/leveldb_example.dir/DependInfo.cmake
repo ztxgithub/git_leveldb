@@ -14,8 +14,12 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "./easylogger/include"
   "./include"
+  "./easylogger/include"
+  "/opt/fsu_packages/paho_1.1.0/include"
+  "/opt/fsu_packages/boost/include"
+  "/opt/fsu_packages/icu/include"
+  "/opt/fsu_packages/leveldb-1.20/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jame/share_user/git_leveldb/easylogger/log.cpp" "/home/jame/share_user/git_leveldb/CMakeFiles/leveldb_example.dir/easylogger/log.cpp.o"
@@ -25,8 +29,12 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "./easylogger/include"
   "./include"
+  "./easylogger/include"
+  "/opt/fsu_packages/paho_1.1.0/include"
+  "/opt/fsu_packages/boost/include"
+  "/opt/fsu_packages/icu/include"
+  "/opt/fsu_packages/leveldb-1.20/include"
   )
 
 # Targets to which this target links.

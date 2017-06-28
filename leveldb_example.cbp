@@ -44,8 +44,12 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/jame/share_user/git_leveldb/./easylogger/include"/>
 					<Add directory="/home/jame/share_user/git_leveldb/./include"/>
+					<Add directory="/home/jame/share_user/git_leveldb/./easylogger/include"/>
+					<Add directory="/opt/fsu_packages/paho_1.1.0/include"/>
+					<Add directory="/opt/fsu_packages/boost/include"/>
+					<Add directory="/opt/fsu_packages/icu/include"/>
+					<Add directory="/opt/fsu_packages/leveldb-1.20/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -69,8 +73,12 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/jame/share_user/git_leveldb/./easylogger/include"/>
 					<Add directory="/home/jame/share_user/git_leveldb/./include"/>
+					<Add directory="/home/jame/share_user/git_leveldb/./easylogger/include"/>
+					<Add directory="/opt/fsu_packages/paho_1.1.0/include"/>
+					<Add directory="/opt/fsu_packages/boost/include"/>
+					<Add directory="/opt/fsu_packages/icu/include"/>
+					<Add directory="/opt/fsu_packages/leveldb-1.20/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
